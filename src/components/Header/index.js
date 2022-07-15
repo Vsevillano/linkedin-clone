@@ -9,6 +9,7 @@ import BusinessCenterIcon from '@material-ui/icons/BusinessCenter';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import AppsIcon from '@material-ui/icons/Apps';
 import SearchIcon from '@material-ui/icons/Search';
+import { Avatar } from '@material-ui/core';
 
 import './styles.css'
 
@@ -26,7 +27,7 @@ export const Header = () => {
             <HeaderIcons Icon={BusinessCenterIcon} title="Empleos"/>
             <HeaderIcons Icon={ChatIcon} title="Mensajes"/>
             <HeaderIcons Icon={NotificationsIcon} title="Notificaciones"/>
-            <HeaderIcons title="Victoriano Sevillano"/>  
+            <HeaderIcons avatar={Avatar} title="yo"/>  
             <HeaderIcons Icon={AppsIcon} title="Productos"/>  
             <HeaderIcons text="Prueba Premium gratis durante 1 mes"/>    
         </nav>

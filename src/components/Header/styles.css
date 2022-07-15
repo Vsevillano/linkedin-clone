@@ -3,6 +3,7 @@
     top: 0;
     border-bottom: 1px solid lightgray;
     z-index: 100;
+    background-color: #fff;
 }
 
 .nav {
@@ -86,4 +87,22 @@
 
 .header__premium:hover {
     text-decoration: underline;
+}
+
+@media only screen and (max-width: 1000px) {
+    .header__buscar {
+        width: 300px;
+    }
+    .header__box > h3 {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .header__buscar {
+        width: 100%;
+    }
+    .header__buscar > input {
+        width: 100%;
+    }
 }
