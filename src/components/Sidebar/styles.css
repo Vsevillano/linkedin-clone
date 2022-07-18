@@ -5,6 +5,7 @@
     border-radius: 10px;
     height: fit-content;
     overflow: hidden;
+    max-width: 225px;
 }
 
 .sidebar__avatar {
@@ -21,11 +22,10 @@
     align-items: center;
     text-align: center;
     border: 1px solid #ddd;
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
-    background-color: white;
+    border-radius: 10px;
+    background: white;
     height: fit-content;
-    padding-bottom: 10px;
+    border-bottom: 10px;
 }
 
 .sidebar__top > img {
@@ -55,14 +55,21 @@
     flex-direction: column;    
     border-top: none;    
     background: white;
-    padding: 0;
+    width: 100%;
+    padding-bottom: 0;
     margin-bottom: 0;
+    border-bottom: 1px solid #ddd;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+
 }
 
 .sidebar__cont {
     display: flex;
     justify-content: space-between;
     padding: 4px 12px;
+    text-align: start;
+    border-top: 1px solid rgba(221,221,221,0.719);
 }
 
 .sidebar__cont:hover {
@@ -87,7 +94,7 @@
     text-decoration: none;
     font-weight: 400;
     color: rgba(0,0,0,.6);
-    font-size: 12px;
+    font-size: 10px;
 }
 
 .sidebar__cont > p a:hover {
@@ -97,3 +104,79 @@
 .sidebar__cont > p a b:hover {
     color:#0a66c2;
 }
+
+.sidebar__marcadores {
+    display: flex;
+    align-items: center;
+    color: #000;
+    font-size: 14px;
+    padding: 5px 0;
+}
+
+.sidebar__icons {
+    width: 15px !important;
+    height: 20px !important;
+}
+
+.sidebar__bottom {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    padding: 12px 8px;
+    background: #fff;
+    border-top-right-radius: 10px ;
+    border-top-left-radius: 10px ;
+    border: 1px solid rgba(221,221,221,0.719);
+    border-bottom: none;
+}
+
+.sidebar__bottom > ul {
+    padding-left: 0px;
+}
+
+.sidebar__bottom > ul li {
+    padding: 4px 0;
+    color: #0a66c2;
+    font-size: 12px;
+    font-weight: 600;
+    list-style: none;
+}
+
+.sidebar__box {
+    position: absolute;
+    left: 85%;
+    margin-top: 20px;
+    color: gray;
+}
+
+.sidebar__recientes {
+    text-align: center;
+    border: 1px solid rgba(221,221,221,0.719);
+    padding-top: 0;
+    background: #fff;
+    border-bottom-right-radius: 10px ;
+    border-bottom-left-radius: 10px ;
+}
+
+.sidebar_recentItem {
+    display: flex;
+    font-size: 12px;
+    padding-top: 5px;
+    padding-left: 10px;
+    color: gray;
+    cursor: pointer;
+    background: #fff;
+    font-weight: 600;
+}
+
+.sidebar_recentItem:hover {
+    background: rgba(0,0,0,0.08);
+    border-radius: 10px;
+    cursor: pointer;
+    color: #000;
+}
+
+.sidebar__hash {
+    margin-right: 10px;
+}
+
