@@ -1,8 +1,13 @@
 import React, { useState } from "react";
 import "./styles.css";
 import { Button } from "@material-ui/core";
+import { useDispatch } from "react-redux";
+import {login} from '../../features/useSlice'
 
 export const Login = () => {
+
+  const dispatch = useDispatch();
+
   const [register, setRegister] = useState(false);
 
   const [email, setEmail] = useState("");
@@ -10,6 +15,9 @@ export const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    dispatch(login({
+      email: 'usuario@ejemplo.com',      
+    }))
   };
 
   const handleRegister = (e) => {
@@ -47,7 +55,7 @@ export const Login = () => {
                   <input
                     type="email"
                     placeholder="Email o teléfono"
-                    value={email}
+                    value="demo@demo.es"
                     onChange={(e) => setEmail(e.target.value)}
                   />
                 </div>
@@ -55,7 +63,7 @@ export const Login = () => {
                   <input
                     type="password"
                     placeholder="Contraseña"
-                    value={password}
+                    value="demo"
                     onChange={(e) => setPassword(e.target.value)}
                   />
                 </div>

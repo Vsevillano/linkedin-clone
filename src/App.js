@@ -6,10 +6,13 @@ import { Header } from './components/Header';
 import { Login } from './components/Login';
 import { Sidebar } from './components/Sidebar';
 import { Widgets } from './components/Widgets';
+import {selectUser} from './features/useSlice';
+import {useSelector, useDispatch} from 'react-redux';
 
 function App() {
 
-  const [user, setUser] = useState(false);
+  const user = useSelector(selectUser);
+
 
   return (
     <div className="App">
@@ -26,7 +29,7 @@ function App() {
           </div>
           </>
         ) : (
-          <Login/>
+          <Login />
         )
         
       }
